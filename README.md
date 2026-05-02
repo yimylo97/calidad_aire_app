@@ -1,17 +1,35 @@
-# calidad_aire_app
+# Calculadora de Calidad del Aire
 
-A new Flutter project.
+Aplicación móvil desarrollada en Flutter para consultar la calidad del aire usando la API pública de Open-Meteo Air Quality.
 
-## Getting Started
+## Funcionalidades
 
-This project is a starting point for a Flutter application.
+- Selección de ciudad de Colombia.
+- Selección de fecha de consulta.
+- Ingreso de horas de exposición diaria.
+- Consulta asíncrona a la API de Open-Meteo.
+- Obtención del promedio diario de PM2.5.
+- Cálculo del índice de exposición.
+- Clasificación del nivel de riesgo: Bajo, Moderado o Alto.
 
-A few resources to get you started if this is your first Flutter project:
+## Fórmula utilizada
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+```text
+índice_exposición = promedio_PM2_5 × horas_exposición
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Valor del índice | Nivel de riesgo |
+| ---------------- | --------------- |
+| < 100            | Bajo            |
+| 100 - 200        | Moderado        |
+| > 200            | Alto            |
+
+
+Tecnologías utilizadas
+Flutter
+Dart
+API REST
+Open-Meteo Air Quality API
+Paquete http
+Autor
+
+Yimy
